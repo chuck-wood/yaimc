@@ -27,7 +27,7 @@ YAIMC is very laconic. It won't really give you any feedback as you enter comman
 
 | Command | Example | Purpose | Notes |
 |---------|---------|---------|------|
-| SET _key_ _value_ | `SET foo bar` | Set the variable _key_ to _value_. | Neither _key_ nor _value_ should not contain spaces. If _value_ contains spaces, only the first word will be saved. |
+| SET _key_ _value_ | `SET foo bar` | Set the variable _key_ to _value_. | Neither _key_ nor _value_ should contain spaces. If _value_ contains spaces, only the first word will be saved. |
 | GET _key_ | `GET foo` | Print the value associated to _key_. | Prints `NULL` when _key_ is not set. |
 | UNSET _key_ | `UNSET foo` | Remove _key_ (and its associated value) from the cache. | |
 | NUMEQUALTO _value_ | `NUMEQUALTO bar` | Print the number of variables that are currently set to _value_. | Prints `0` if no variables are set to _value_. |
@@ -43,7 +43,7 @@ YAIMC supports the notion of _[transactions](https://en.wikipedi.org/wiki/Databa
 | ROLLBACK | Undo all of the data commands issued within the most recent transaction block and close that block. | Prints `NO TRANSACTION` if no transaction is in progress. |
 | COMMIT | Close _all_ open transaction blocks, permanently applying all data commands made within them. | Prints `NO TRANSACTION` if no transaction is in progress. |
 
-> Any command executed outside of a transaction block will be committed immediately.
+Any command executed outside of a transaction block will be committed immediately.
 
 ## Further Development
 
