@@ -35,7 +35,7 @@ YAIMC is very laconic. It won't really give you any feedback as you enter comman
 
 ### Transaction Commands
 
-YAIMC supports the notion of _[transactions](https://en.wikipedi.org/wiki/Database_transaction)_ -- in short, commands can be grouped into _blocks_ in order to ensure that related updates all happen in a single [consistent action](https://en.wikipedia.org/wiki/ACID_(computer_science).
+YAIMC supports the notion of _[transactions](https://en.wikipedi.org/wiki/Database_transaction)_ -- in short, commands can be grouped into _blocks_ in order to ensure that related updates all happen in a single [consistent action](https://en.wikipedia.org/wiki/ACID_(computer_science)).
 
 | Command | Purpose | Notes |
 |---------|---------|------|
