@@ -1,15 +1,19 @@
 # YAIMC
 "Yet Another In-Memory Cache"
 
-This application implements a basic in-memory key-value store (conceptually similar to [Memcached](https://memcached.org/)), with support for transactions. YAIMC does not support concurrent use.
+This application implements a basic in-memory [key-value store](https://en.wikipedia.org/wiki/Key-value_database) (conceptually similar to [Memcached](https://memcached.org/)), with support for transactions.
 
 ## Getting Started
 
-For a quick and easy way to demo YAIMC, visit https://glitch.com/edit/console.html?yaimc, type `node app.js`, and hit Enter. This will start you right up in the application, where you can run commands immediately. When you are done, simply close the window.
+For a quick and easy way to demo YAIMC, visit https://glitch.com/edit/console.html?yaimc, type `node app.js`, and hit Enter. This will start you right up in the application, where you can run [commands](#basic-commands) immediately. When you are done, simply close the window.
+
+> [Glitch](https://glitch.com/) is a quick and easy way to prototype web applications, with or without Node.js.
+
+Visit https://glitch.com/edit/#!/yaimc to view or remix the code. Note that, while Glitch will reload web apps as they are changed, console apps must be restarted manually (by issuing the `END` command and then restarting with `node app.js`).
 
 ### Installation
 
-If you prefer to run YAIMC locally, you will first need to install NodeJS.
+If you prefer to run YAIMC locally, you will first need to install [Node.js](https://nodejs.org).
 
 > Visit https://nodejs.org/en/download/current/ to download and install the latest version of Node.
 
@@ -17,7 +21,7 @@ After installing Node, download the file [app.js](app.js) to anywhere on your co
 
 ### Usage
 
-YAIMC is very laconic. It won't really give you any feedback as you enter commands, except to let you know if it doesn't recognize a command, or in response to `GET`. Generally speaking, as they say, no news is good news.
+YAIMC is very laconic. It won't really give you any feedback as you enter commands, except to let you know if it doesn't recognize a command, or in response to commands like `GET`. Generally speaking, as they say, no news is good news.
 
 ### Basic Commands
 
@@ -31,7 +35,7 @@ YAIMC is very laconic. It won't really give you any feedback as you enter comman
 
 ### Transaction Commands
 
-YAIMC supports the notion of _[transactions](https://en.wikipedia.org/wiki/Database_transaction)_.
+YAIMC supports the notion of _[transactions](https://en.wikipedi.org/wiki/Database_transaction)_ -- in short, commands can be grouped into _blocks_ in order to ensure that related updates all happen in a single [consistent action](https://en.wikipedia.org/wiki/ACID_(computer_science).
 
 | Command | Purpose | Notes |
 |---------|---------|------|
@@ -39,4 +43,4 @@ YAIMC supports the notion of _[transactions](https://en.wikipedia.org/wiki/Datab
 | ROLLBACK | Undo all of the data commands issued within the most recent transaction block and close that block. | Prints `NO TRANSACTION` if no transaction is in progress. |
 | COMMIT | Close _all_ open transaction blocks, permanently applying all data commands made within them. | Prints `NO TRANSACTION` if no transaction is in progress. |
 
-Any data command executed outside of a transaction block will be committed immediately.
+> Any command executed outside of a transaction block will be committed immediately.
