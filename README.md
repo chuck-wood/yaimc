@@ -5,7 +5,7 @@ This application implements a basic in-memory key-value store (conceptually simi
 
 ## Getting Started
 
-For a quick and easy way to demo YAIMC, visit https://glitch.com/edit/console.html?yaimc, type `node app.js`, and hit Enter. This will start you right up in the application, where you can run commands immediately.
+For a quick and easy way to demo YAIMC, visit https://glitch.com/edit/console.html?yaimc, type `node app.js`, and hit Enter. This will start you right up in the application, where you can run commands immediately. When you are done, simply close the window.
 
 ### Installation
 
