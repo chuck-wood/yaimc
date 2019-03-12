@@ -44,3 +44,12 @@ YAIMC supports the notion of _[transactions](https://en.wikipedi.org/wiki/Databa
 | COMMIT | Close _all_ open transaction blocks, permanently applying all data commands made within them. | Prints `NO TRANSACTION` if no transaction is in progress. |
 
 > Any command executed outside of a transaction block will be committed immediately.
+
+## Further Development
+
+How could this application be improved?
+
+* This application has not been tested for concurrent use.
+* Interaction is through stdin/stdout, which is not necessarily the most flexible or performant.
+* For that matter, refactoring to use another I/O method won't be as easy as it could, as I/O was not done through a generic interface.
+* Isolation levels for transactions.
